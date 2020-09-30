@@ -1,0 +1,78 @@
+.miat-wrapper {
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  -webkit-animation-duration: 15s;
+          animation-duration: 15s;
+  position: fixed;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  top: 50vh;
+  left: 50vw;
+}
+
+.miat-wrapper > .miat {
+  width: 100vw;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.miat-wrapper.miat-wrapper--snap {
+  -webkit-animation-name: jig-snap;
+          animation-name: jig-snap;
+  -webkit-animation-timing-function: step-end;
+          animation-timing-function: step-end;
+}
+
+.miat-wrapper.miat-wrapper--smooth {
+  -webkit-animation-name: jig-smooth;
+          animation-name: jig-smooth;
+}
+
+.miat-wrapper.miat-wrapper--stopped {
+  -webkit-animation-name: none !important;
+          animation-name: none !important;
+  display: none;
+}
+
+@-webkit-keyframes jig-snap {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  2.5% {
+    -webkit-transform: scaleX(-0.1) scaleY(0.1);
+            transform: scaleX(-0.1) scaleY(0.1);
+  }
+  5% {
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3);
+  }
+}
+
+@keyframes jig-snap {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  2.5% {
+    -webkit-transform: scaleX(-0.1) scaleY(0.1);
+            transform: scaleX(-0.1) scaleY(0.1);
+  }
+  5% {
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3);
+  }
+}
+
+@-webkit-keyframes jig-smooth {
+  0% {
+    visibility: hidden;
+  }
+}
+
+@keyframes jig-smooth {
+  0% {
+    visibility: hidden;
+  }
+}
+/*# sourceMappingURL=miata.css.map */

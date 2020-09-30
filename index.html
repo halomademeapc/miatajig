@@ -1,0 +1,34 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miata Jig</title>
+    <link rel="stylesheet" href="styles/miata.css">
+</head>
+
+<body>
+    <button onclick="go(this)">Ready steady go</button>
+    <div class="miat-wrapper miat-wrapper--snap miat-wrapper--stopped">
+        <img src="images/miat.webp" class="miat">
+    </div>
+    <div class="miat-wrapper miat-wrapper--smooth miat-wrapper--stopped">
+        <img src="images/miat.webp" class="miat">
+    </div>
+    <audio id="tire" loop>
+        <source src="sound/tire.mp4">
+    </audio>
+
+    <script type="text/javascript">
+        function go(triggerEl) {
+            var els = document.getElementsByClassName('miat-wrapper--stopped');
+            for (var i = 0; i < els.length; i++) {
+                els[i].classList.remove('miat-wrapper--stopped');
+            }
+            triggerEl.remove();
+            document.getElementById('tire').play();
+        }
+    </script>
+</body>
+
+</html>
