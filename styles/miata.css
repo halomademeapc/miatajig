@@ -1,8 +1,8 @@
 .miat-wrapper {
   -webkit-transform-origin: top left;
           transform-origin: top left;
-  -webkit-animation-duration: 15s;
-          animation-duration: 15s;
+  -webkit-animation-duration: 15.148s;
+          animation-duration: 15.148s;
   position: fixed;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
@@ -10,7 +10,8 @@
   left: 50vw;
 }
 
-.miat-wrapper > .miat {
+.miat-wrapper > .miat,
+.miat-wrapper > .pistola {
   width: 100vw;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -28,10 +29,30 @@
           animation-name: jig-smooth;
 }
 
+.miat-wrapper.miat-wrapper--pistola {
+  -webkit-animation-name: pistola;
+          animation-name: pistola;
+  -webkit-animation-timing-function: step-end;
+          animation-timing-function: step-end;
+  -webkit-transform: translate(9%, 0%) scale(0.12);
+          transform: translate(9%, 0%) scale(0.12);
+}
+
 .miat-wrapper.miat-wrapper--stopped {
   -webkit-animation-name: none !important;
           animation-name: none !important;
   display: none;
+}
+
+.blackout {
+  -webkit-animation-name: blackout;
+          animation-name: blackout;
+  -webkit-animation-timing-function: step-end;
+          animation-timing-function: step-end;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 15.148s;
+          animation-duration: 15.148s;
 }
 
 @-webkit-keyframes jig-snap {
@@ -44,8 +65,81 @@
             transform: scaleX(-0.1) scaleY(0.1);
   }
   5% {
-    -webkit-transform: scale(0.3);
-            transform: scale(0.3);
+    -webkit-transform: scaleX(-0.2) scaleY(0.2);
+            transform: scaleX(-0.2) scaleY(0.2);
+  }
+  6.25% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  7.5%,
+  10%,
+  11.25%,
+  12.5%,
+  13.75%,
+  15% {
+    -webkit-transform: scaleX(-0.35) scaleY(0.35);
+            transform: scaleX(-0.35) scaleY(0.35);
+  }
+  10.625%,
+  11.875%,
+  13.125%,
+  14.375%,
+  15.625% {
+    -webkit-transform: scaleX(0.35) scaleY(0.35);
+            transform: scaleX(0.35) scaleY(0.35);
+  }
+  20% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  35% {
+    left: 80vw;
+    top: 80vh;
+    -webkit-transform: scale(-0.2, 0.2);
+            transform: scale(-0.2, 0.2);
+  }
+  37.5% {
+    left: 75vw;
+    top: 75vh;
+    -webkit-transform: scale(-0.3, 0.3);
+            transform: scale(-0.3, 0.3);
+  }
+  40% {
+    left: 67vw;
+    top: 67vh;
+    -webkit-transform: scale(-0.4, 0.4);
+            transform: scale(-0.4, 0.4);
+  }
+  42.5% {
+    top: 50vh;
+    left: 50vw;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  75% {
+    -webkit-transform: scale(-0.4, 0.4);
+            transform: scale(-0.4, 0.4);
+  }
+  77.5% {
+    -webkit-transform: scale(-0.3, 0.3);
+            transform: scale(-0.3, 0.3);
+  }
+  80% {
+    -webkit-transform: scale(-0.23, 0.23);
+            transform: scale(-0.23, 0.23);
+  }
+  82.5% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  92% {
+    -webkit-transform: scaleX(-0.3) scaleY(0.3);
+            transform: scaleX(-0.3) scaleY(0.3);
+  }
+  95% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
 }
 
@@ -59,20 +153,253 @@
             transform: scaleX(-0.1) scaleY(0.1);
   }
   5% {
-    -webkit-transform: scale(0.3);
-            transform: scale(0.3);
+    -webkit-transform: scaleX(-0.2) scaleY(0.2);
+            transform: scaleX(-0.2) scaleY(0.2);
+  }
+  6.25% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  7.5%,
+  10%,
+  11.25%,
+  12.5%,
+  13.75%,
+  15% {
+    -webkit-transform: scaleX(-0.35) scaleY(0.35);
+            transform: scaleX(-0.35) scaleY(0.35);
+  }
+  10.625%,
+  11.875%,
+  13.125%,
+  14.375%,
+  15.625% {
+    -webkit-transform: scaleX(0.35) scaleY(0.35);
+            transform: scaleX(0.35) scaleY(0.35);
+  }
+  20% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  35% {
+    left: 80vw;
+    top: 80vh;
+    -webkit-transform: scale(-0.2, 0.2);
+            transform: scale(-0.2, 0.2);
+  }
+  37.5% {
+    left: 75vw;
+    top: 75vh;
+    -webkit-transform: scale(-0.3, 0.3);
+            transform: scale(-0.3, 0.3);
+  }
+  40% {
+    left: 67vw;
+    top: 67vh;
+    -webkit-transform: scale(-0.4, 0.4);
+            transform: scale(-0.4, 0.4);
+  }
+  42.5% {
+    top: 50vh;
+    left: 50vw;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  75% {
+    -webkit-transform: scale(-0.4, 0.4);
+            transform: scale(-0.4, 0.4);
+  }
+  77.5% {
+    -webkit-transform: scale(-0.3, 0.3);
+            transform: scale(-0.3, 0.3);
+  }
+  80% {
+    -webkit-transform: scale(-0.23, 0.23);
+            transform: scale(-0.23, 0.23);
+  }
+  82.5% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  92% {
+    -webkit-transform: scaleX(-0.3) scaleY(0.3);
+            transform: scaleX(-0.3) scaleY(0.3);
+  }
+  95% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@-webkit-keyframes blackout {
+  95% {
+    background-color: black;
+  }
+}
+
+@keyframes blackout {
+  95% {
+    background-color: black;
+  }
+}
+
+@-webkit-keyframes pistola {
+  0% {
+    opacity: 0;
+  }
+  93.5% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0;
+  }
+}
+
+@keyframes pistola {
+  0% {
+    opacity: 0;
+  }
+  93.5% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0;
   }
 }
 
 @-webkit-keyframes jig-smooth {
-  0% {
-    visibility: hidden;
+  0%,
+  19.99999% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+    left: 110vw;
+    top: 110vh;
+    -webkit-transform: scaleX(-0.2) scaleY(0.2) rotate(0deg) translateX(300vw) rotate(0deg);
+            transform: scaleX(-0.2) scaleY(0.2) rotate(0deg) translateX(300vw) rotate(0deg);
+  }
+  24.99999% {
+    opacity: 1;
+    left: 110vw;
+    top: 110vh;
+    -webkit-transform: scaleX(-0.2) scaleY(0.2) rotate(-90deg) translateX(300vw) rotate(90deg);
+            transform: scaleX(-0.2) scaleY(0.2) rotate(-90deg) translateX(300vw) rotate(90deg);
+  }
+  25% {
+    opacity: 0;
+  }
+  29.9999% {
+    opacity: 0;
+    left: 110vw;
+    top: 110vh;
+  }
+  30% {
+    opacity: 1;
+    left: 80vw;
+    top: 80vh;
+    -webkit-transform: translate(20vw, 20vh) scaleX(-0.05) scaleY(0.05);
+            transform: translate(20vw, 20vh) scaleX(-0.05) scaleY(0.05);
+  }
+  34.99999% {
+    opacity: 1;
+    left: 80vw;
+    top: 80vh;
+    -webkit-transform: scale(-0.2, 0.2);
+            transform: scale(-0.2, 0.2);
+  }
+  35%,
+  44.99999% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 1;
+    left: 65vw;
+    top: 55vh;
+    -webkit-transform: scale(-1.8, 1.8);
+            transform: scale(-1.8, 1.8);
+  }
+  65%,
+  67.49999% {
+    opacity: 1;
+    left: 65vw;
+    top: 55vh;
+    -webkit-transform: scale(-0.7, 0.7);
+            transform: scale(-0.7, 0.7);
+  }
+  67.5% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
 @keyframes jig-smooth {
-  0% {
-    visibility: hidden;
+  0%,
+  19.99999% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+    left: 110vw;
+    top: 110vh;
+    -webkit-transform: scaleX(-0.2) scaleY(0.2) rotate(0deg) translateX(300vw) rotate(0deg);
+            transform: scaleX(-0.2) scaleY(0.2) rotate(0deg) translateX(300vw) rotate(0deg);
+  }
+  24.99999% {
+    opacity: 1;
+    left: 110vw;
+    top: 110vh;
+    -webkit-transform: scaleX(-0.2) scaleY(0.2) rotate(-90deg) translateX(300vw) rotate(90deg);
+            transform: scaleX(-0.2) scaleY(0.2) rotate(-90deg) translateX(300vw) rotate(90deg);
+  }
+  25% {
+    opacity: 0;
+  }
+  29.9999% {
+    opacity: 0;
+    left: 110vw;
+    top: 110vh;
+  }
+  30% {
+    opacity: 1;
+    left: 80vw;
+    top: 80vh;
+    -webkit-transform: translate(20vw, 20vh) scaleX(-0.05) scaleY(0.05);
+            transform: translate(20vw, 20vh) scaleX(-0.05) scaleY(0.05);
+  }
+  34.99999% {
+    opacity: 1;
+    left: 80vw;
+    top: 80vh;
+    -webkit-transform: scale(-0.2, 0.2);
+            transform: scale(-0.2, 0.2);
+  }
+  35%,
+  44.99999% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 1;
+    left: 65vw;
+    top: 55vh;
+    -webkit-transform: scale(-1.8, 1.8);
+            transform: scale(-1.8, 1.8);
+  }
+  65%,
+  67.49999% {
+    opacity: 1;
+    left: 65vw;
+    top: 55vh;
+    -webkit-transform: scale(-0.7, 0.7);
+            transform: scale(-0.7, 0.7);
+  }
+  67.5% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
   }
 }
 /*# sourceMappingURL=miata.css.map */

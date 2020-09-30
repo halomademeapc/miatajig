@@ -15,6 +15,9 @@
     <div class="miat-wrapper miat-wrapper--smooth miat-wrapper--stopped">
         <img src="images/miat.webp" class="miat">
     </div>
+    <div class="miat-wrapper miat-wrapper--pistola miat-wrapper--stopped">
+        <img src="images/pistola.webp" class="pistola">
+    </div>
     <audio id="tire" loop>
         <source src="sound/tire.mp4">
     </audio>
@@ -22,10 +25,11 @@
     <script type="text/javascript">
         function go(triggerEl) {
             var els = document.getElementsByClassName('miat-wrapper--stopped');
-            for (var i = 0; i < els.length; i++) {
-                els[i].classList.remove('miat-wrapper--stopped');
+            while (els.length) {
+                els[0].classList.remove('miat-wrapper--stopped');
             }
             triggerEl.remove();
+            document.getElementsByTagName('body')[0].classList.add('blackout');
             document.getElementById('tire').play();
         }
     </script>
